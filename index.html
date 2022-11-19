@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="maxWidth=device-maxWidth, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons8-cameras-16.png" type="image/x-icon">
+    <title>Photography Hub</title>
+</head>
+<body>
+    <header>
+        <h1>Photography Hub</h1>
+    </header>
+    <main>
+        <div class="about">
+            <div class="dimmer">
+                <h1 class="block-title">About</h1>
+                <p>Welcome to <u>Photography Hub</u>. This place has all my work inside for you to browse. Feel free to check out my Intstagram & TikTok for more content.</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="dimmer">
+                <h1 class="block-title">Gallery</h1>
+                <div class="row">
+                    <div id="img" >
+                        <img src="Photos/2PeopleOnBench.webp" alt="">
+                        <img src="Photos/Allyway1.webp" alt="">
+                        <img src="Photos/Architecture1.webp" alt="">
+                        <img src="Photos/Architecture2.webp" alt="">
+                        <img src="Photos/BikeImage1.webp" alt="">
+                        <img src="Photos/Person4.webp" alt="">
+                        <img src="Photos/Person5.webp" alt="">
+                        <img src="Photos/PersonInHoodie.webp" alt="">
+                        <img src="Photos/PersonInHoodie2.webp" alt="">
+                    </div>
+                    <div id="img1" >
+                        <img src="Photos/BikeImage2.webp" alt="">
+                        <img src="Photos/Car1.webp" alt="">
+                        <img src="Photos/Car10.webp" alt="">
+                        <img src="Photos/Car2.webp" alt="">
+                        <img src="Photos/Car3.webp" alt="">
+                        <img src="Photos/River1.webp" alt="">
+                        <img src="Photos/River2.webp" alt="">
+                        <img src="Photos/River3.webp" alt="">
+                        <img src="Photos/River4.webp" alt="">
+                        <img src="Photos/Room1.webp" alt="">
+                        <img src="Photos/PersonInHoodie3.webp" alt="">
+                    </div>
+                    <div id="img2" >
+                        <img src="Photos/Car4.webp" alt="">
+                        <img src="Photos/Car5.webp" alt="">
+                        <img src="Photos/Car6.webp" alt="">
+                        <img src="Photos/Car7.webp" alt="">
+                        <img src="Photos/Car8.webp" alt="">
+                        <img src="Photos/Room2.webp" alt="">
+                        <img src="Photos/Sign1.webp" alt="">
+                        <img src="Photos/Stairs1.webp" alt="">
+                        <img src="Photos/WaterFall1.webp" alt="">
+                        <img src="Photos/WestCoast1.webp" alt="">
+                        <img src="Photos/WestCoast6.webp" alt="">
+                    </div>
+                    <div id="img3" >
+                        <img src="Photos/Nature1.webp" alt="">
+                        <img src="Photos/Nature3.webp" alt="">
+                        <img src="Photos/Person1.webp" alt="">
+                        <img src="Photos/Person2.webp" alt="">
+                        <img src="Photos/Person3.webp" alt="">
+                        <img src="Photos/WestCoast2.webp" alt="">
+                        <img src="Photos/WestCoast3.webp" alt="">
+                        <img src="Photos/WestCoast4.webp" alt="">
+                        <img src="Photos/WestCoast5.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact"> 
+            <div class="dimmer">
+                <h1 class="block-title">Contact</h1>
+                <p>Check out my Intstagram & TikTok:</p>
+                <img class="link" src="icons8-instagram-50.png" alt="Intstagram" onclick="instagramlink()">
+                <img class="link" src="icons8-tiktok-50.png" alt="TikTok" onclick="tiktoklink()">
+                <p>Or Email me at:</p>
+                <p id="email" onclick="copy()">caidencruz0902@gmail.com</p>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p class="footer">Site made by WombatDingbat Studio's</p>
+        <a class="old-site" href="index.html">Old website</a><br>
+        <p class="footer">Last updated 19/11/2022</p>
+    </footer>
+    <script>
+        var w = window.innerWidth;
+        console.log(w)
+
+        if (w < 1200) {
+                document.getElementById("img").style.maxWidth = "20%";
+                document.getElementById("img1").style.maxWidth = "20%";
+                document.getElementById("img2").style.maxWidth = "20%";
+                document.getElementById("img3").style.maxWidth = "20%";
+            }
+        else {
+            document.getElementById("img").style.maxWidth = "24%";
+            document.getElementById("img1").style.maxWidth = "24%";
+            document.getElementById("img2").style.maxWidth = "24%";
+            document.getElementById("img3").style.maxWidth = "24%";
+        }
+        
+
+        function instagramlink() {
+            window.open('https://www.instagram.com/caiden_cruz02/?hl=en', '_blank')
+        }
+
+        function tiktoklink() {
+            window.open('https://www.tiktok.com/@._caiden_cruz', '_blank')
+        }
+
+        document.getElementById("img").addEventListener("mouseover", mouseOver);
+        document.getElementById("img").addEventListener("mouseout", mouseOut);
+
+        document.getElementById("img1").addEventListener("mouseover", mouseOver1);
+        document.getElementById("img1").addEventListener("mouseout", mouseOut1);
+
+        document.getElementById("img2").addEventListener("mouseover", mouseOver2);
+        document.getElementById("img2").addEventListener("mouseout", mouseOut2);
+
+        document.getElementById("img3").addEventListener("mouseover", mouseOver3);
+        document.getElementById("img3").addEventListener("mouseout", mouseOut3);
+
+        function mouseOver() {
+            document.getElementById("img").style.maxWidth = "50%";
+            document.getElementById("img1").style.maxWidth = "15%";
+            document.getElementById("img2").style.maxWidth = "15%";
+            document.getElementById("img3").style.maxWidth = "15%";
+        }
+
+        function mouseOut() {
+            if (w < 1200) {
+                document.getElementById("img").style.maxWidth = "20%";
+                document.getElementById("img1").style.maxWidth = "20%";
+                document.getElementById("img2").style.maxWidth = "20%";
+                document.getElementById("img3").style.maxWidth = "20%";
+            }
+            else {
+                document.getElementById("img").style.maxWidth = "24%";
+                document.getElementById("img1").style.maxWidth = "24%";
+                document.getElementById("img2").style.maxWidth = "24%";
+                document.getElementById("img3").style.maxWidth = "24%";
+            }
+        }
+
+        function mouseOver1() {
+            document.getElementById("img1").style.maxWidth = "50%";
+            document.getElementById("img").style.maxWidth = "15%";
+            document.getElementById("img2").style.maxWidth = "15%";
+            document.getElementById("img3").style.maxWidth = "15%";
+        }
+
+        function mouseOut1() {
+            if (w < 1200) {
+                document.getElementById("img").style.maxWidth = "20%";
+                document.getElementById("img1").style.maxWidth = "20%";
+                document.getElementById("img2").style.maxWidth = "20%";
+                document.getElementById("img3").style.maxWidth = "20%";
+            }
+            else {
+                document.getElementById("img").style.maxWidth = "24%";
+                document.getElementById("img1").style.maxWidth = "24%";
+                document.getElementById("img2").style.maxWidth = "24%";
+                document.getElementById("img3").style.maxWidth = "24%";
+            }
+        }
+
+        function mouseOver2() {
+            document.getElementById("img2").style.maxWidth = "50%";
+            document.getElementById("img1").style.maxWidth = "15%";
+            document.getElementById("img").style.maxWidth = "15%";
+            document.getElementById("img3").style.maxWidth = "15%";
+        }
+
+        function mouseOut2() {
+            if (w < 1200) {
+                document.getElementById("img").style.maxWidth = "20%";
+                document.getElementById("img1").style.maxWidth = "20%";
+                document.getElementById("img2").style.maxWidth = "20%";
+                document.getElementById("img3").style.maxWidth = "20%";
+            }
+            else {
+                document.getElementById("img").style.maxWidth = "24%";
+                document.getElementById("img1").style.maxWidth = "24%";
+                document.getElementById("img2").style.maxWidth = "24%";
+                document.getElementById("img3").style.maxWidth = "24%";
+            }
+        }
+
+        function mouseOver3() {
+            document.getElementById("img3").style.maxWidth = "50%";
+            document.getElementById("img1").style.maxWidth = "15%";
+            document.getElementById("img2").style.maxWidth = "15%";
+            document.getElementById("img").style.maxWidth = "15%";
+        }
+
+        function mouseOut3() {
+            if (w < 1200) {
+                document.getElementById("img").style.maxWidth = "20%";
+                document.getElementById("img1").style.maxWidth = "20%";
+                document.getElementById("img2").style.maxWidth = "20%";
+                document.getElementById("img3").style.maxWidth = "20%";
+            }
+            else {
+                document.getElementById("img").style.maxWidth = "24%";
+                document.getElementById("img1").style.maxWidth = "24%";
+                document.getElementById("img2").style.maxWidth = "24%";
+                document.getElementById("img3").style.maxWidth = "24%";
+            }
+        }
+    </script>
+</body>
+</html>
